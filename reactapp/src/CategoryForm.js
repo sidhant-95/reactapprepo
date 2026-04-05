@@ -7,7 +7,7 @@ function CategoryForm() {
 
    // 🔹 Fetch categories
   const loadCategories = () => {
-    axios.get("https://localhost:7041/api/Categories/getallcategory")
+    axios.get("https://ef-product-api-app-eubuhddmgycggze3.centralindia-01.azurewebsites.net/api/Categories/getallcategory")
       .then(res => {
         setCategories(res.data);
       })
@@ -29,7 +29,7 @@ function CategoryForm() {
         name:name
       };   
 
-      axios.post('https://localhost:7041/api/Categories/AddCategory',  data )
+      axios.post('https://ef-product-api-app-eubuhddmgycggze3.centralindia-01.azurewebsites.net/api/Categories/AddCategory',  data )
         .then(response => {
           console.log('Category created:', response.data);
           setName("");

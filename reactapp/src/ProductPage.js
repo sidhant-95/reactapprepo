@@ -9,7 +9,8 @@ function ProductPage() {
 
   // 🔹 Load categories for dropdown
   useEffect(() => {
-    axios.get("https://localhost:7041/api/Categories/getallcategory")
+    // axios.get("https://localhost:7041/api/Categories/getallcategory")
+     axios.get("https://ef-product-api-app-eubuhddmgycggze3.centralindia-01.azurewebsites.net/api/Categories/getallcategory")
       .then(res => {
         setCategories(res.data);
       })
